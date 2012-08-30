@@ -4,9 +4,9 @@
 
 DENSITY="${DENSITY:-288}"
 FONT="${FONT:-Courier-Bold}"
-ROTATE="-90"
+ROTATE="${ROTATE:--90}"
 TEMPLATE="${TEMPLATE:-business-card.png}"
-TEXT_POSITION="-305,90"
+TEXT_POSITION="${TEXT_POSITION:--305,90}"
 
 ## Main program
 
