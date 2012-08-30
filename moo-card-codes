@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Uses GraphicsMagick to add text to an image.
+
+DENSITY="${DENSITY:-288}"
+FONT="${FONT:-Courier-Bold}"
+ROTATE="-90"
+TEMPLATE="${TEMPLATE:-business-card.png}"
+TEXT_POSITION="-305,90"
+
+## Main program
+
+[ -n "$DEBUG" ] && set -x
+
+let i=1
+read CODE
+while [ -n "$CODE" ]; do
+    OUTPUT="card-$(printf '%03d' $i).png"
+    echo "Creating $OUTPUT with code $CODE"
+    gm convert -density $DENSITY -font "$FONT" \
+        -draw "rotate $ROTATE text $TEXT_POSITION '$CODE'" \
+        "$TEMPLATE" $OUTPUT
+    let i=i+1
+    read CODE
+done
