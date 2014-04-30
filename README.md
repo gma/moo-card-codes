@@ -12,4 +12,4 @@ That's what this script is for. It uses GraphicsMagick.
 
 For instructions (and an example) see this blog post:
 
-<http://www.theagileplanner.com/blog/building-agile-planner/moo-card-codes>
+<https://www.agileplannerapp.com/blog/building-agile-planner/moo-card-codes>
